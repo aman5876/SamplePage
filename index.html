@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <title>Sample page</title>
+    
+    <head>
+        <style>
+        /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            
+            /* Modal Content */
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 40%;
+                height: 60%;
+            }
+            
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                
+            }
+            
+            .close:hover,.close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                
+            }
+            
+            .imgpop {
+               clip: rect(0px,2000px,100px,0px);                               
+            }
+        </style>
+    </head>
+    
+    <body>
+        <center><button id="myBtn"><img src="http://stichio-trial.s3.amazonaws.com/images/20160406143947233648"></button></center>
+        
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close"></span>
+            <div class="imgpop"><img src="http://stichio-trial.s3.amazonaws.com/images/20160406143947233648" width="50%">
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+            }
+        span.onclick = function() {
+            modal.style.display = "none";
+            }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+        function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.setRequestHeader('Authorization', 'Token d0689f1e3ac6a820ce598c372b92e920a18a58cd');
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+        console.log(JSON.parse(httpGet('https://yudql2tsmh.execute-api.us-east-1.amazonaws.com/testStichio/testing/b8680137-fde7-437d-80d9-d88b92633e97/?q=profileView'))['Frames'][0]['images'][0]);
+
+    </script>
+        
+    </body>
+</html>
