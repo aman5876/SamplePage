@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+<style>
+    .names {
+    position: relative;
+    display:inline-block;
+    background-color: white;
+    border: solid grey;    
+    width: 25%;
+    height: 100px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 50px auto;
+    }
+    .main {
+    position: relative;
+    display:inline-block;
+    background-color: white;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+    }
+    .nav {
+        background-color: azure;
+        max-width: 15%;
+        min-width: 140px;
+        flex: 1;
+    }
+    h2 {
+        background-color: aqua;
+        max-width: 80%;
+        text-align: justify;
+        margin: 25px auto;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+    h3 {
+        padding-top: 40px;
+    }
+    .logo {
+        margin: 10px 10px 10px 10px ;
+    }
+    ul {
+        list-style-type: none;
+    }
+    ul#menu2 li {
+        display: inline-block;
+    }
+    ul#menu3 li a {
+        display: inline;
+        float: right;
+        background-color: beige;
+        border:  black;
+        color: black;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    ul#menu3 li a:hover {
+        background-color: darkgray;
+    }    
+        
+</style>
+    
+</head>
+    
+<body>
+    
+  <div class="container">
+      
+      <div class="nav">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" width="100px" height="100px" class="logo">
+          <h2>Create Server</h2>
+          <ul id="menu1">
+              <li>Dashboard</li>
+              <li>Servers</li>
+              <li>Images</li>
+              <li>Volumes</li>
+              <li>Snapshots</li>
+              <li>Network</li>
+              <li>Security</li>
+              <li>storage</li>
+           </ul>
+          <ul id="menu2">
+              <li>Support</li>
+              <li>Community</li>
+              <li>Documentation</li>
+          </ul>
+      </div>
+      
+      <div class="main">
+          
+          <ul id="menu3">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:left"><a href="#paris">Paris</a></li>
+          </ul><br><br>
+          
+          <h3>Create your server</h3><br>
+          <h1>$11.99</h1>
+          
+          <ul style="text-align:left;">
+              <li>Name</li>
+              <input alt="name">
+              <li>Server Type</li>
+          </ul>      
+      
+          <div class="names">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    
+          <div class="names">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    
+          <div class="names">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          
+      </div>
+      
+  </div>
+    
+</body>
+</html>
